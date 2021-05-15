@@ -2,6 +2,7 @@
 declare(strict_types=1);
 
 use App\Application\Actions\User\ListUsersAction;
+use App\Application\Actions\User\AuthenticateAction;
 use App\Application\Actions\User\ViewUserAction;
 use App\Application\Actions\Video\ListVideosAction;
 use App\Application\Actions\Video\ViewVideoAction;
@@ -20,6 +21,8 @@ return function (App $app) {
         $response->getBody()->write('Hello world!');
         return $response;
     });
+
+    $app->post('/authenticate', AuthenticateAction::class);
 
     $app->group('/users', function (Group $group) {
         $group->get('', ListUsersAction::class);
