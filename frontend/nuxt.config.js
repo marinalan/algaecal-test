@@ -44,6 +44,9 @@ export default {
   /*
   ** Nuxt.js dev-modules
   */
+  router: {
+    middleware: 'auth'
+  },
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module'
@@ -53,12 +56,17 @@ export default {
   */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    '@nuxtjs/axios'
   ],
   /*
   ** Build configuration
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+
+  axios: {
+
   }
 }
