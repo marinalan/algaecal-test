@@ -12,8 +12,8 @@ class ViewVideoAction extends VideoAction
      */
     protected function action(): Response
     {
-        $videoId = (int) $this->resolveArg('id');
-        $video = $this->videoRepository->findVideoOfId($videoId);
+        $videoId = $this->resolveArg('video_id');
+        $video = $this->videoRepository->findVideoOfVideoId($videoId);
 
         $this->logger->info("Video of id `${videoId}` was viewed.");
 

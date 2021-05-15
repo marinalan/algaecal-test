@@ -15,5 +15,5 @@ interface VideoRepository
      * @return Video
      * @throws VideoNotFoundException
      */
-    public function findVideoOfId(int $id): Video;
+    public function findVideoOfVideoId(string $video_id): Video;
 }
