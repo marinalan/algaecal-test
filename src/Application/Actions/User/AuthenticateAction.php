@@ -17,11 +17,11 @@ class AuthenticateAction extends UserAction
         $username = $input->username;
 
         $this->logger->info("Authenticate action called for username: $username.");
-        $result = 0;
+        $result = null;
 
         foreach ($users as $user) {
           if ($user->getUsername() == $username) {
-            $result = 1;
+            $result = $user;
             break;
           }
         }
