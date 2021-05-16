@@ -23,7 +23,7 @@ import axios from 'axios';
 
 export default {
   async asyncData({ params, redirect }) {
-    const result = await axios.get('http://localhost:8080/videos/'+params.video_id)
+    const result = await axios.get(process.env.apiBaseUrl+'/videos/'+params.video_id)
     return {
         video: result.data.data
     }

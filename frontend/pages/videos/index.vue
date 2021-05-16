@@ -46,7 +46,7 @@ export default {
     }
   },
   async asyncData({ params, redirect }) {
-    const result = await axios.get('http://localhost:8080/videos')
+    const result = await axios.get(process.env.apiBaseUrl+'/videos')
     return {
         offset: 0,
         videos: result.data.data

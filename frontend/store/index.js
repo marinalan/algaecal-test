@@ -24,7 +24,7 @@ export const getters = {
 
 export const actions = {
   login({ commit }, { data, cb }) {
-    this.$axios.post('http://localhost:8080/authenticate', data)
+    this.$axios.post(process.env.apiBaseUrl+'/authenticate', data)
       .then(response => {
         commit('setLoggedIn', response.data.data ?  true : false);
         commit('setUser', response.data.data );
