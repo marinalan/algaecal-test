@@ -36,5 +36,9 @@ export const actions = {
       .finally(() => {
         //commit('setFetching', false); 
       });
+  }, 
+  logout({ commit }) {
+    commit('setLoggedIn', false);
+    commit('setUser', null );
   }
 }

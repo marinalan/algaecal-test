@@ -1,12 +1,22 @@
 <template>
-  <div>
-    <h1>Video page</h1>
-    <p>Path: {{ $route.path }}</p>
-    <p>{{ video.title }}</p>
-    <p>{{ video.description }}</p>
-    <p>{{ video.video_id }}</p>
-    <p>{{ video.category }}</p>
-  </div>
+  <b-container>
+    <b-row>
+      <b-col>
+        <NuxtLink to="/videos" class="algaecal-link">Back</NuxtLink>
+      </b-col>
+    </b-row>
+    <b-row>
+      <div class="algaecal-container">
+        <div class="page-title">
+          <h3 class="video-title">Video Player</h3>
+          <b-badge pill variant="info">{{ video.category }}</b-badge>
+        </div>
+        <VideoPlayer :video_id="video.video_id"/>
+        <h4 class="video-title">{{ video.title }}</h4>
+        <p class="video-description">{{ video.description }}</p> 
+      </div>
+    </b-row>
+  </b-container>
 </template>
 <script>
 import axios from 'axios';

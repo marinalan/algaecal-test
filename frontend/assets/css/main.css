@@ -1,6 +1,12 @@
 body {
   color: #034136;
 }
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
 button.btn-algae {
   border-radius: 40px;
   padding: 10px 60px;
@@ -15,7 +21,81 @@ button.btn-algae.green {
 button.btn-algae.green:disabled {
   background-color: #adebdc;
 }
+button.btn-algae.orange {
+  background-color: #ed501f;
+}
 .custom-control.custom-checkbox {
   text-align: left;
   margin-bottom: 50px;
+}
+a.algaecal-nav {
+  color: #00382c;
+  font-size: 26px;
+  display: block;
+  padding: 0.5rem 1.5rem;
+}
+a.algaecal-nav:hover {
+  text-decoration: none;
+  color: #096853;
+}
+.thumbnail {
+  max-width: 512px;
+  max-height: 321px;
+  width: 100%;
+  min-height: 220px;
+  background-image: url(~/assets/images/video_thumbnail.png);
+  background-repeat: no-repeat;
+  /*background-size: 512px 321px;*/
+  background-size: contain;
+  background-position: center bottom;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+.thumbnail:hover {
+  background-image: url(~/assets/images/video_thumbnail_hover.png);
+}
+h4.video-title {
+  color: #007e61;
+  margin-top: 44px;
+}
+p.video-description {
+  color: #00382c;
+
+}
+a:hover {
+  text-decoration: none;
+}
+select.video-filter {
+  display: inline-block;
+  width: 100%;
+  height: calc(1.5rem +0.75rem +2px);
+  padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  vertical-align: middle;
+  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right 0.75rem center/8px 10px no-repeat;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+select.video-filter:focus {
+  border-color: #80bdff;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.algaecal-container {
+  width: 75%;
+  margin: auto;
+}
+a.algaecal-link {
+  color: #00382c;
 }
