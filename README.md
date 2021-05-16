@@ -107,6 +107,11 @@ description of the video on it.
     Layout
     
 ## Components Needed:
-LoginForm: the login form itself
-VideoSummary: Thumbnail, title, description
-VideoPlayer: Take a Wistia Id and create a player for it.
+LoginForm: 
+  the login form itself
+
+VideoSummary: 
+  Thumbnail, title, description
+
+VideoPlayer: 
+  Take a Wistia Id and create a player for it.
