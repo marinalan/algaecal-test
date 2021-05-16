@@ -35,13 +35,13 @@ api. The video endpoint should return this JSON:
   "data": [
     {
       "id": 1,
-      "title": "What It’s Like To Work At AlgaeCal,
+      "title": "What It’s Like To Work At AlgaeCal",
       "description": "Discover what it’s like to work at AlgaeCal with this quick video!",
       "video_id": "m3ralniniq"
     },
     {
       "id": 2,
-      "title": "Esther Mangini Testimonial,
+      "title": "Esther Mangini Testimonial",
       "category": "Testimonials",
       "description": "Esther’s journey to healthier bones”,
       "video_id": "ybyot0dm7q"
@@ -54,7 +54,7 @@ api. The video endpoint should return this JSON:
     },
     {
       "id": 4,
-      "title": "Perfect Pilates For Osteoporosis - Legwork,
+      "title": "Perfect Pilates For Osteoporosis - Legwork",
       "description": "Bone Healthy Exercises!”,
       "video_id": "3n5p02h26w"
     },
@@ -110,13 +110,3 @@ description of the video on it.
 LoginForm: the login form itself
 VideoSummary: Thumbnail, title, description
 VideoPlayer: Take a Wistia Id and create a player for it.
-
-## Notes on Git and Delivery
-Note: Make sure your submission includes a complete git history with meaningful commit messages.
-
-When you have completed your test, please save your project to your own repo and email a link to 
-your repo to Steve, Bob and Charlene: steve@algaecal.com, bob@algaecal.com, and 
-charlene@algaecal.com, please make sure your project is accessible to us.
-
-In your email, please also attach your resume and cover letter, and a link to your portfolio/or 
-links to any examples of your work. 
