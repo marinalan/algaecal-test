@@ -5,28 +5,6 @@ exclusive video content.
 
 The site uses Slim framework as a backend and Nuxt, VueJS and BootstrapVue on the Frontend.
 
-Based on the skeleton code provided, please make the following modifications:
-
-* Implement a Vuex store. You will use this to store data such as login.
-
-* The submit form must validate against the list of members. Unlike a real-world application we
-won't be checking passwords, but we will want to make sure the customer exists. User data is
-found at the uri: http://localhost:8080/users
-
-* If a person goes to http://localhost:3000 they should be redirected to a http://localhost:3000/login
-if they are not logged in, or http://localhost:3000/videos if they are logged in. Login persistence
-is not a requirement. If I refresh the page, it is okay if I get logged out (and if this does happen,
-I should get automatically redirected to the login page)
-
-* A user who is not logged in and goes to anywhere besides /login should be redirected to /login
-
-* Modify the login form found at uri: http://localhost:3000/login
-    - Move the login form into a "LoginForm" component
-    - Instead of checking against "email address" as the form currently implies, check against
-    "username"
-    - Display the message 'Sorry, that username is not found' if the person does not exist. Otherwise
-    log them in and direct them to http://localhost:3000/videos
-
 * Copying the patterns used to create the Users, create a video library resource on this RESTful
 api. The video endpoint should return this JSON:
 ```json
@@ -79,7 +57,6 @@ api. The video endpoint should return this JSON:
   ]
 }
 ```
-
 * The `/videos` page should use this data to populate the video list. Each list item should 
 link to an individual video playing page, `/videos/{video_id}` that has a single player and
 description of the video on it.
@@ -115,3 +92,12 @@ VideoSummary:
 
 VideoPlayer: 
   Take a Wistia Id and create a player for it.
+
+  This project contains both the frontend and the backend. The quickest way to get started is to run the build script from the root of the project:
+```./build.sh```
+
+This uses php composer and npm to install the required packages. For the build script to work you will have to have both on your system and in your path. You'll need to run both the slim framework app and the frontend app. So you'll need two terminals for this. From the root, run 
+```composer start```
+
+And from the /frontend folder run
+```npm run dev```
