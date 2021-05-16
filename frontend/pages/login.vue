@@ -1,11 +1,12 @@
 <template>
-  <div class="container">
-    <div>
-      <b-card>
-        Welcome To Our Video Library, Please Log In
-        <LoginForm /> 
-      </b-card>
-    </div>
+  <div class="main">
+    <b-card 
+      title="User Login"
+      style="width: 40rem;"
+      class="mb-2"
+    >
+      <LoginForm /> 
+    </b-card>
   </div>
 </template>
 
@@ -15,41 +16,19 @@ export default {
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand',
-  'Source Sans Pro',
-  -apple-system,
-  BlinkMacSystemFont,
-  'Segoe UI',
-  Roboto,
-  'Helvetica Neue',
-  Arial,
-  sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
+   .main {
+     background-color: #00382c;
+     margin: 0 auto;
+     min-height: calc(100vh - 80px);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+   }
+   .card-title {
+     font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 
+       'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+     color: #007e61;
+     font-size: 68px;
+   }
 </style>

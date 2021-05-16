@@ -1,8 +1,6 @@
 export const state = () => ({
   loggedIn: false,
   loggedInUser: null,
-  fetching: false,
-  videos: []
 })
 
 export const mutations = {
@@ -12,12 +10,6 @@ export const mutations = {
   setUser(state, user) {
     state.loggedInUser = user;
   },
-  setFetching(state, isFetching) {
-    state.fetching = isFetching;
-  },
-  setVideos(state, videos) {
-    state.videos. videos
-  }
 }
 
 export const getters = {
@@ -27,10 +19,6 @@ export const getters = {
 
   loggedInUser(state) {
     return state.loggedInUser
-  },
-
-  isFetching(state) {
-    return state.fetching
   },
 }
 

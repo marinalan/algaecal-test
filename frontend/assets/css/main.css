@@ -1,0 +1,21 @@
+body {
+  color: #034136;
+}
+button.btn-algae {
+  border-radius: 40px;
+  padding: 10px 60px;
+  border: none;
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+}
+button.btn-algae.green {
+  background-color: #007e61;
+}
+button.btn-algae.green:disabled {
+  background-color: #adebdc;
+}
+.custom-control.custom-checkbox {
+  text-align: left;
+  margin-bottom: 50px;
+}

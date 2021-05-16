@@ -1,9 +1,7 @@
 <template>
   <b-form @submit.stop.prevent="onSubmit">
     <b-form-group
-      id="input-group-1"
-      label="Username:"
-      label-for="input-1"
+      id="username"
     >
       <b-form-input
         id="input-1"
@@ -11,12 +9,22 @@
         type="text"
         required
         placeholder="Your username"
+        @input.native="checkUsername"
       ></b-form-input>
     </b-form-group>
+    <b-form-checkbox
+      id="remember-me"
+      v-model="form.remember_me"
+      name="remember-me"
+      value="true"
+      unchecked-value="false"
+    >
+      Remember Me
+    </b-form-checkbox>
     <b-alert v-model="showDismissibleAlert" variant="danger" dismissible>
       Sorry, that username is not found
     </b-alert>
-    <b-button type="submit" variant="primary">Submit</b-button>
+    <button type="submit" class="btn-algae green" :disabled="!isValid">Login</button>
   </b-form>
 </template>
 <script>
@@ -24,12 +32,17 @@ export default {
   data() {
     return {
       form: {
-        username: ''
+        username: '',
+        remember_me: false
       },
-      showDismissibleAlert: false
+      showDismissibleAlert: false,
+      isValid: false
     };
   },
   methods: {
+    checkUsername() {
+      this.isValid = this.form.username.length>=3;
+    },
     onAuthenticationResult(loggedIn) {
       this.form.username = '';
       if (loggedIn) {
