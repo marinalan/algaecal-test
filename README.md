@@ -97,7 +97,13 @@ VideoPlayer:
 ```./build.sh```
 
 This uses php composer and npm to install the required packages. For the build script to work you will have to have both on your system and in your path. You'll need to run both the slim framework app and the frontend app. So you'll need two terminals for this. From the root, run 
+
+```composer install```
+
 ```composer start```
 
 And from the /frontend folder run
+
+```npm install```
+
 ```npm run dev```
